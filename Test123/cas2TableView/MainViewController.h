@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#import <sqlite3.h>
+#import "FMDB.h"
+
 @interface MainViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+
 
 @end

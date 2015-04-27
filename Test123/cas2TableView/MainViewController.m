@@ -11,6 +11,8 @@
 
 @interface MainViewController ()
 
+@property (strong,nonatomic) FMDatabase *db;
+
 @end
 
 @implementation MainViewController
@@ -19,6 +21,39 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
+    NSString *dbPath = [NSString stringWithFormat:@"%@/Documents/moni.db",NSHomeDirectory()];
+    //
+    
+    if(![[NSFileManager defaultManager] fileExistsAtPath:dbPath]){
+        NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"moni" ofType:@"db"];
+        
+        NSError *error = nil;
+        [[NSFileManager defaultManager] copyItemAtPath:bundlePath toPath:dbPath error:&error];
+        if(error){
+            NSLog(@"error %@",error.localizedDescription);
+        }
+    }
+    
+    self.db = [FMDatabase databaseWithPath:dbPath];
+    
+    
+    [self.db open];
+    
+    [self.db executeUpdate:@"insert into Maja Values(?,?)",[NSNumber numberWithInt:1], @"maja" ];
+    
+    for (int i=0; i<10; i++) {
+        [self.db executeUpdate:@"insert into Maja Values(?,?)",[NSNumber numberWithInt:i], @"maja" ];
+    }
+    
+    
+    NSLog(@"==================");
+    FMResultSet *result = [self.db executeQuery:@"select * from Maja"];
+    while ([result next]) {
+        NSLog(@" %d",[result intForColumn:@"id"]);
+        NSLog(@" %@",[result stringForColumn:@"username"]);
+    }
+    
+    [self.db close];
 }
 
 - (void)didReceiveMemoryWarning {

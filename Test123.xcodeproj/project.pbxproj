@@ -28,6 +28,9 @@
 		AAF9FF5C1AEEB49A004492A6 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF9FF551AEEB49A004492A6 /* FMDatabaseQueue.m */; };
 		AAF9FF5D1AEEB49A004492A6 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF9FF581AEEB49A004492A6 /* FMResultSet.m */; };
 		AAF9FF5F1AEEB4E6004492A6 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF9FF5E1AEEB4E6004492A6 /* libsqlite3.dylib */; };
+		AAF9FF631AEEB63C004492A6 /* sqliteNOTES.c in Sources */ = {isa = PBXBuildFile; fileRef = AAF9FF611AEEB63C004492A6 /* sqliteNOTES.c */; };
+		AAF9FF651AEEBABF004492A6 /* moni.db in Resources */ = {isa = PBXBuildFile; fileRef = AAF9FF641AEEB69E004492A6 /* moni.db */; };
+		AAF9FF661AEEBAC1004492A6 /* moni.db in Resources */ = {isa = PBXBuildFile; fileRef = AAF9FF641AEEB69E004492A6 /* moni.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 		AAF9FF571AEEB49A004492A6 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		AAF9FF581AEEB49A004492A6 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		AAF9FF5E1AEEB4E6004492A6 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		AAF9FF611AEEB63C004492A6 /* sqliteNOTES.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqliteNOTES.c; sourceTree = "<group>"; };
+		AAF9FF621AEEB63C004492A6 /* sqliteNOTES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqliteNOTES.h; sourceTree = "<group>"; };
+		AAF9FF641AEEB69E004492A6 /* moni.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = moni.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,7 @@
 		AA5300E91AE7FBEF00FD8A40 = {
 			isa = PBXGroup;
 			children = (
+				AAF9FF601AEEB624004492A6 /* sqliteCmds */,
 				AAF9FF5E1AEEB4E6004492A6 /* libsqlite3.dylib */,
 				AA5300F41AE7FBEF00FD8A40 /* Test123 */,
 				AA5301111AE7FBEF00FD8A40 /* Test123Tests */,
@@ -198,6 +205,16 @@
 			path = fmdb;
 			sourceTree = "<group>";
 		};
+		AAF9FF601AEEB624004492A6 /* sqliteCmds */ = {
+			isa = PBXGroup;
+			children = (
+				AAF9FF641AEEB69E004492A6 /* moni.db */,
+				AAF9FF611AEEB63C004492A6 /* sqliteNOTES.c */,
+				AAF9FF621AEEB63C004492A6 /* sqliteNOTES.h */,
+			);
+			path = sqliteCmds;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,6 +301,7 @@
 				AAF9FF471AEE9565004492A6 /* MainViewController.xib in Resources */,
 				AAF9FF421AEE94CE004492A6 /* Cas2Storyboard.storyboard in Resources */,
 				AA5301061AE7FBEF00FD8A40 /* Images.xcassets in Resources */,
+				AAF9FF651AEEBABF004492A6 /* moni.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF9FF661AEEBAC1004492A6 /* moni.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA5301261AE800E400FD8A40 /* City.m in Sources */,
+				AAF9FF631AEEB63C004492A6 /* sqliteNOTES.c in Sources */,
 				AA5300FB1AE7FBEF00FD8A40 /* AppDelegate.m in Sources */,
 				AAF9FF4B1AEE9B10004492A6 /* UnreadTableViewCell.m in Sources */,
 				AAF9FF591AEEB49A004492A6 /* FMDatabase.m in Sources */,
