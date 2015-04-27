@@ -35,6 +35,9 @@
         cell = (UnreadTableViewCell*)[cellArray objectAtIndex:0];
     }
     
+    
+    
+    
     [cell updateCellWithTitle:@"test" newsImageView:nil isRead:NO];
     
     return cell;
@@ -43,7 +46,13 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 300;
+}
+
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 170;
 }
 
 

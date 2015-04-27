@@ -25,10 +25,19 @@
 {
     
     [newsTitleLabel setText:_title];
-    [newsImageImageView setImage:newsImage];
+    
+    //[newsImageImageView setImage:newsImage];
+    
+    [newsImageImageView setImage:[UIImage imageNamed:@"pam" ]];
+    
     if(isRead)
     {
         [ribbon setHidden:YES];
     }
+    else
+    {
+        [ribbon setImage:[UIImage imageNamed:@"tie"] ];
+    }
+    
 }
 @end
