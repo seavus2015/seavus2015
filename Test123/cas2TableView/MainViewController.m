@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "UnreadTableViewCell.h"
 
 @interface MainViewController ()
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,7 +28,14 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell;
+    static NSString *reuseIdentifier = @"unreadNews";
+    UnreadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    if (!cell) {
+        NSArray *cellArray = [[NSBundle mainBundle] loadNibNamed:@"UnreadTableViewCell" owner:self options:nil];
+        cell = (UnreadTableViewCell*)[cellArray objectAtIndex:0];
+    }
+    
+    [cell updateCellWithTitle:@"test" newsImageView:nil isRead:NO];
     
     return cell;
 }
@@ -34,7 +43,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return 3;
 }
 
 
