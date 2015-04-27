@@ -15,6 +15,13 @@
 		AA5301061AE7FBEF00FD8A40 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA5301051AE7FBEF00FD8A40 /* Images.xcassets */; };
 		AA5301091AE7FBEF00FD8A40 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA5301071AE7FBEF00FD8A40 /* LaunchScreen.xib */; };
 		AA5301151AE7FBEF00FD8A40 /* Test123Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5301141AE7FBEF00FD8A40 /* Test123Tests.m */; };
+		AA5301261AE800E400FD8A40 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5301251AE800E400FD8A40 /* City.m */; };
+		AA5301291AE800E500FD8A40 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5301281AE800E500FD8A40 /* User.m */; };
+		AAF9FF421AEE94CE004492A6 /* Cas2Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF9FF411AEE94CE004492A6 /* Cas2Storyboard.storyboard */; };
+		AAF9FF461AEE9565004492A6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF9FF441AEE9565004492A6 /* MainViewController.m */; };
+		AAF9FF471AEE9565004492A6 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF9FF451AEE9565004492A6 /* MainViewController.xib */; };
+		AAF9FF4B1AEE9B10004492A6 /* UnreadTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF9FF491AEE9B10004492A6 /* UnreadTableViewCell.m */; };
+		AAF9FF4C1AEE9B10004492A6 /* UnreadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF9FF4A1AEE9B10004492A6 /* UnreadTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +49,17 @@
 		AA53010E1AE7FBEF00FD8A40 /* Test123Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test123Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5301131AE7FBEF00FD8A40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA5301141AE7FBEF00FD8A40 /* Test123Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test123Tests.m; sourceTree = "<group>"; };
+		AA5301241AE800E400FD8A40 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		AA5301251AE800E400FD8A40 /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		AA5301271AE800E500FD8A40 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		AA5301281AE800E500FD8A40 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		AAF9FF411AEE94CE004492A6 /* Cas2Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Cas2Storyboard.storyboard; sourceTree = "<group>"; };
+		AAF9FF431AEE9565004492A6 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		AAF9FF441AEE9565004492A6 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		AAF9FF451AEE9565004492A6 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		AAF9FF481AEE9B10004492A6 /* UnreadTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnreadTableViewCell.h; sourceTree = "<group>"; };
+		AAF9FF491AEE9B10004492A6 /* UnreadTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnreadTableViewCell.m; sourceTree = "<group>"; };
+		AAF9FF4A1AEE9B10004492A6 /* UnreadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UnreadTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +101,7 @@
 		AA5300F41AE7FBEF00FD8A40 /* Test123 */ = {
 			isa = PBXGroup;
 			children = (
+				AAF9FF401AEE92F1004492A6 /* cas2TableView */,
 				AA5300F91AE7FBEF00FD8A40 /* AppDelegate.h */,
 				AA5300FA1AE7FBEF00FD8A40 /* AppDelegate.m */,
 				AA5300FF1AE7FBEF00FD8A40 /* ViewController.h */,
@@ -91,6 +110,10 @@
 				AA5301051AE7FBEF00FD8A40 /* Images.xcassets */,
 				AA5301071AE7FBEF00FD8A40 /* LaunchScreen.xib */,
 				AA5300FC1AE7FBEF00FD8A40 /* Test123.xcdatamodeld */,
+				AA5301271AE800E500FD8A40 /* User.h */,
+				AA5301281AE800E500FD8A40 /* User.m */,
+				AA5301241AE800E400FD8A40 /* City.h */,
+				AA5301251AE800E400FD8A40 /* City.m */,
 				AA5300F51AE7FBEF00FD8A40 /* Supporting Files */,
 			);
 			path = Test123;
@@ -120,6 +143,20 @@
 				AA5301131AE7FBEF00FD8A40 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AAF9FF401AEE92F1004492A6 /* cas2TableView */ = {
+			isa = PBXGroup;
+			children = (
+				AAF9FF411AEE94CE004492A6 /* Cas2Storyboard.storyboard */,
+				AAF9FF431AEE9565004492A6 /* MainViewController.h */,
+				AAF9FF441AEE9565004492A6 /* MainViewController.m */,
+				AAF9FF451AEE9565004492A6 /* MainViewController.xib */,
+				AAF9FF481AEE9B10004492A6 /* UnreadTableViewCell.h */,
+				AAF9FF491AEE9B10004492A6 /* UnreadTableViewCell.m */,
+				AAF9FF4A1AEE9B10004492A6 /* UnreadTableViewCell.xib */,
+			);
+			path = cas2TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,8 +239,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF9FF4C1AEE9B10004492A6 /* UnreadTableViewCell.xib in Resources */,
 				AA5301041AE7FBEF00FD8A40 /* Main.storyboard in Resources */,
 				AA5301091AE7FBEF00FD8A40 /* LaunchScreen.xib in Resources */,
+				AAF9FF471AEE9565004492A6 /* MainViewController.xib in Resources */,
+				AAF9FF421AEE94CE004492A6 /* Cas2Storyboard.storyboard in Resources */,
 				AA5301061AE7FBEF00FD8A40 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,8 +262,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA5301261AE800E400FD8A40 /* City.m in Sources */,
 				AA5300FB1AE7FBEF00FD8A40 /* AppDelegate.m in Sources */,
+				AAF9FF4B1AEE9B10004492A6 /* UnreadTableViewCell.m in Sources */,
+				AA5301291AE800E500FD8A40 /* User.m in Sources */,
 				AA5300FE1AE7FBEF00FD8A40 /* Test123.xcdatamodeld in Sources */,
+				AAF9FF461AEE9565004492A6 /* MainViewController.m in Sources */,
 				AA5301011AE7FBEF00FD8A40 /* ViewController.m in Sources */,
 				AA5300F81AE7FBEF00FD8A40 /* main.m in Sources */,
 			);
@@ -418,6 +462,7 @@
 				AA53011A1AE7FBEF00FD8A40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AA53011B1AE7FBEF00FD8A40 /* Build configuration list for PBXNativeTarget "Test123Tests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +471,7 @@
 				AA53011D1AE7FBEF00FD8A40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

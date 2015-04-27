@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MainViewController.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,24 @@
 
 @implementation AppDelegate
 
+@synthesize mainVC;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //mainVC = (ViewController*) [self.window rootViewController];
+    //[mainVC setManagedObjectContext:_managedObjectContext];
+    //[mainVC setManagedObjectModel:_managedObjectModel];
+    //[mainVC setPersistentStoreCoordinator:_persistentStoreCoordinator];
+    
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    self.main = [[MainViewController alloc] init];
+    [self.window setRootViewController:self.main];
+    
+    //nezz dali treba ova
+    [self.window makeKeyWindow];
+    
     return YES;
 }
 
