@@ -7,13 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MWFeedParser.h"
+#import "FMDB.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <MWFeedParserDelegate>
 
 
 @property ( strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property ( strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property ( strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+@property (strong,nonatomic) FMDatabase *db;
+
 
 
 @end
