@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailsViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionn;
 
 @end

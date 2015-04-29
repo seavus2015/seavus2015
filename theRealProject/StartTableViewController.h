@@ -20,5 +20,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong,nonatomic) FMDatabase *db;
 
+@property (strong,nonatomic) NSMutableArray *niza;
+
 
 @end

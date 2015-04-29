@@ -6,8 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController">
             <connections>
-                <outlet property="descriptionn" destination="xDA-kD-ftb" id="2LZ-nM-JAb"/>
-                <outlet property="image" destination="ysL-Bq-twk" id="jqp-aA-lMs"/>
+                <outlet property="descriptionn" destination="xDA-kD-ftb" id="oyG-HS-Ac8"/>
+                <outlet property="image" destination="ysL-Bq-twk" id="48H-Ee-87B"/>
+                <outlet property="title" destination="myp-38-3K4" id="MRg-C4-Tky"/>
                 <outlet property="titleLabel" destination="myp-38-3K4" id="frz-bp-qIh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

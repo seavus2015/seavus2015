@@ -7,6 +7,8 @@
 //
 
 #import "StartTableViewController.h"
+#import "DetailsViewController.h"
+
 
 @interface StartTableViewController ()
 
@@ -34,17 +36,19 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.niza count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    
     static NSString *reuseIdentifier = @"unreadNews";
     UnreadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     if (!cell) {
@@ -59,6 +63,19 @@
     
     return cell;
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DAONews *tmp = [self.niza objectAtIndex:indexPath.row];
+    DetailsViewController *dvc= [[DetailsViewController alloc]init];
+    
+}
+
+//hack
+//-(void)viewDidLayoutSubviews
+//{
+//    [myscroll setContentSize...]
+//}
 
 
 #pragma mark - RSS
@@ -98,8 +115,8 @@
     d.descriptionn = item.description;
     d.pubDate = item.date;
     
-    [self saveDaoObj:d];
-    
+    //[self saveDaoObj:d];
+    [self.niza addObject:d];
 }
 -(void)feedParserDidFinish:(MWFeedParser *)parser
 {
