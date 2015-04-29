@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MWFeedParser.h"
+#import "FMDB.h"
+#import "User.h"
+#import "City.h"
+#import "DAONews.h"
+#import "UnreadTableViewCell.h"
 
-@interface StartTableViewController : UITableViewController
+
+@interface StartTableViewController : UITableViewController <UITableViewDelegate,UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong,nonatomic) FMDatabase *db;
+
 
 @end

@@ -43,6 +43,126 @@
     return 0;
 }
 
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *reuseIdentifier = @"unreadNews";
+    UnreadTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    if (!cell) {
+        NSArray *cellArray = [[NSBundle mainBundle] loadNibNamed:@"UnreadTableViewCell" owner:self options:nil];
+        cell = (UnreadTableViewCell*)[cellArray objectAtIndex:0];
+    }
+    
+    
+    
+    
+    [cell updateCellWithTitle:@"test" newsImageView:nil isRead:NO];
+    
+    return cell;
+}
+
+
+#pragma mark - RSS
+
+
+- (void) parseRSS
+{
+    NSURL *feedURL = [NSURL URLWithString:@"http://it.com.mk/category/vesti/it-mk/feed/"];
+    MWFeedParser *feedParser = [[MWFeedParser alloc] initWithFeedURL:feedURL];
+    feedParser.delegate = self;
+    feedParser.feedParseType = ParseTypeItemsOnly;
+    feedParser.connectionType = ConnectionTypeAsynchronously;
+    [feedParser parse];
+}
+
+
+
+-(void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error
+{
+    NSLog(@"didFailWithError");
+}
+
+-(void)feedParser:(MWFeedParser *)parser didParseFeedInfo:(MWFeedInfo *)info
+{
+    NSLog(@"didParseFeedInfo");
+}
+
+-(void)feedParser:(MWFeedParser *)parser didParseFeedItem:(MWFeedItem *)item
+{
+    NSLog(@"didParseFeedItem  title:%@  description %@" ,item.title,item.description);
+    
+    DAONews *d = [[DAONews alloc]init];
+    d.title = item.title;
+    //d.link = item.link;
+    d.link = [[[item enclosures] valueForKey:@"url"] objectAtIndex:0];
+    d.content = item.content;
+    d.descriptionn = item.description;
+    d.pubDate = item.date;
+    
+    [self saveDaoObj:d];
+    
+}
+-(void)feedParserDidFinish:(MWFeedParser *)parser
+{
+    NSLog(@"feedParserDidFinish");
+}
+-(void)feedParserDidStart:(MWFeedParser *)parser
+{
+    NSLog(@"feedParserDidStart");
+}
+
+
+
+-(void)displayImageView:(NSString*)linkot
+{
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0),^(void){
+        
+        NSData *dataImage = [NSData dataWithContentsOfURL:[NSURL URLWithString:linkot]];
+        UIImage *newsImage = [UIImage imageWithData:dataImage];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //
+            //[self.img1 setImage:newsImage];
+        });
+        
+    });
+    
+}
+
+-(void) saveDaoObj:(DAONews*)dao
+{
+    NSString *dbPath = [NSString stringWithFormat:@"%@/Documents/rss.db",NSHomeDirectory()];
+    
+    if(![[NSFileManager defaultManager] fileExistsAtPath:dbPath]){
+        NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"rss" ofType:@"db"];
+        
+        NSError *error = nil;
+        [[NSFileManager defaultManager] copyItemAtPath:bundlePath toPath:dbPath error:&error];
+        if(error){
+            NSLog(@"error %@",error.localizedDescription);
+        }
+    }
+    
+    self.db = [FMDatabase databaseWithPath:dbPath];
+    
+    
+    [self.db open];
+    // create table 'News1'(id number, content varchar,imageURL varchar,description varchar,pubDate date,title varchar,isRead number);
+    [self.db executeUpdate:@"insert into News1(title,content,imageURL,description,isRead) Values(?,?,?,?,?)", dao.title , dao.content , dao.link , dao.descriptionn,dao.isRead ];
+    
+    NSLog(@"============READ======");
+    FMResultSet *result = [self.db executeQuery:@"select * from News1"];
+    while ([result next]) {
+        //NSLog(@" %d",[result intForColumn:@"id"]);
+        NSLog(@" %@",[result stringForColumn:@"title"]);
+        NSLog(@" %@",[result stringForColumn:@"imageURL"]);
+    }
+    
+    [self.db close];
+    
+    [self displayImageView:dao.link];
+}
+
+
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];

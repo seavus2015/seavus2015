@@ -41,8 +41,6 @@
     feedParser.feedParseType = ParseTypeItemsOnly;
     feedParser.connectionType = ConnectionTypeAsynchronously;
     [feedParser parse];
-    
-    
 }
 
 -(void)feedParser:(MWFeedParser *)parser didFailWithError:(NSError *)error

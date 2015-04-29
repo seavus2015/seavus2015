@@ -45,6 +45,8 @@
 		AAF9FF891AF14B91004492A6 /* TheRealStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF9FF881AF14B91004492A6 /* TheRealStoryboard.storyboard */; };
 		AAF9FF8D1AF14BD8004492A6 /* StartTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF9FF8B1AF14BD8004492A6 /* StartTableViewController.m */; };
 		AAF9FF8E1AF14BD8004492A6 /* StartTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF9FF8C1AF14BD8004492A6 /* StartTableViewController.xib */; };
+		AAF9FF921AF15018004492A6 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF9FF901AF15018004492A6 /* DetailsViewController.m */; };
+		AAF9FF931AF15018004492A6 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF9FF911AF15018004492A6 /* DetailsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +124,9 @@
 		AAF9FF8A1AF14BD8004492A6 /* StartTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartTableViewController.h; sourceTree = "<group>"; };
 		AAF9FF8B1AF14BD8004492A6 /* StartTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartTableViewController.m; sourceTree = "<group>"; };
 		AAF9FF8C1AF14BD8004492A6 /* StartTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartTableViewController.xib; sourceTree = "<group>"; };
+		AAF9FF8F1AF15018004492A6 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		AAF9FF901AF15018004492A6 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		AAF9FF911AF15018004492A6 /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +294,9 @@
 				AAF9FF8A1AF14BD8004492A6 /* StartTableViewController.h */,
 				AAF9FF8B1AF14BD8004492A6 /* StartTableViewController.m */,
 				AAF9FF8C1AF14BD8004492A6 /* StartTableViewController.xib */,
+				AAF9FF8F1AF15018004492A6 /* DetailsViewController.h */,
+				AAF9FF901AF15018004492A6 /* DetailsViewController.m */,
+				AAF9FF911AF15018004492A6 /* DetailsViewController.xib */,
 			);
 			path = theRealProject;
 			sourceTree = "<group>";
@@ -378,6 +386,7 @@
 				AA5301041AE7FBEF00FD8A40 /* Main.storyboard in Resources */,
 				AAF9FF861AF14029004492A6 /* rss.db in Resources */,
 				AA5301091AE7FBEF00FD8A40 /* LaunchScreen.xib in Resources */,
+				AAF9FF931AF15018004492A6 /* DetailsViewController.xib in Resources */,
 				AAF9FF471AEE9565004492A6 /* MainViewController.xib in Resources */,
 				AAF9FF421AEE94CE004492A6 /* Cas2Storyboard.storyboard in Resources */,
 				AA5301061AE7FBEF00FD8A40 /* Images.xcassets in Resources */,
@@ -418,6 +427,7 @@
 				AAF9FF7F1AF135EF004492A6 /* NSString+HTML.m in Sources */,
 				AAF9FF5D1AEEB49A004492A6 /* FMResultSet.m in Sources */,
 				AAF9FF5B1AEEB49A004492A6 /* FMDatabasePool.m in Sources */,
+				AAF9FF921AF15018004492A6 /* DetailsViewController.m in Sources */,
 				AA5300FE1AE7FBEF00FD8A40 /* Test123.xcdatamodeld in Sources */,
 				AAF9FF7B1AF135EF004492A6 /* MWFeedInfo.m in Sources */,
 				AAF9FF7C1AF135EF004492A6 /* MWFeedItem.m in Sources */,
