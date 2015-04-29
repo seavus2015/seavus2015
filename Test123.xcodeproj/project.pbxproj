@@ -42,6 +42,9 @@
 		AAF9FF841AF13D37004492A6 /* DAONews.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF9FF831AF13D37004492A6 /* DAONews.m */; };
 		AAF9FF851AF14029004492A6 /* rss.db in Resources */ = {isa = PBXBuildFile; fileRef = AAF9FF811AF13C39004492A6 /* rss.db */; };
 		AAF9FF861AF14029004492A6 /* rss.db in Resources */ = {isa = PBXBuildFile; fileRef = AAF9FF811AF13C39004492A6 /* rss.db */; };
+		AAF9FF891AF14B91004492A6 /* TheRealStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF9FF881AF14B91004492A6 /* TheRealStoryboard.storyboard */; };
+		AAF9FF8D1AF14BD8004492A6 /* StartTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF9FF8B1AF14BD8004492A6 /* StartTableViewController.m */; };
+		AAF9FF8E1AF14BD8004492A6 /* StartTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF9FF8C1AF14BD8004492A6 /* StartTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +118,10 @@
 		AAF9FF811AF13C39004492A6 /* rss.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = rss.db; path = fmdb/rss.db; sourceTree = "<group>"; };
 		AAF9FF821AF13D37004492A6 /* DAONews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAONews.h; sourceTree = "<group>"; };
 		AAF9FF831AF13D37004492A6 /* DAONews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAONews.m; sourceTree = "<group>"; };
+		AAF9FF881AF14B91004492A6 /* TheRealStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TheRealStoryboard.storyboard; sourceTree = "<group>"; };
+		AAF9FF8A1AF14BD8004492A6 /* StartTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartTableViewController.h; sourceTree = "<group>"; };
+		AAF9FF8B1AF14BD8004492A6 /* StartTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartTableViewController.m; sourceTree = "<group>"; };
+		AAF9FF8C1AF14BD8004492A6 /* StartTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +146,7 @@
 		AA5300E91AE7FBEF00FD8A40 = {
 			isa = PBXGroup;
 			children = (
+				AAF9FF871AF14B75004492A6 /* theRealProject */,
 				AAF9FF6A1AF1347E004492A6 /* RSS */,
 				AAF9FF671AF13380004492A6 /* NOTES.c */,
 				AAF9FF681AF13380004492A6 /* NOTES.h */,
@@ -274,6 +282,17 @@
 			path = RSS;
 			sourceTree = "<group>";
 		};
+		AAF9FF871AF14B75004492A6 /* theRealProject */ = {
+			isa = PBXGroup;
+			children = (
+				AAF9FF881AF14B91004492A6 /* TheRealStoryboard.storyboard */,
+				AAF9FF8A1AF14BD8004492A6 /* StartTableViewController.h */,
+				AAF9FF8B1AF14BD8004492A6 /* StartTableViewController.m */,
+				AAF9FF8C1AF14BD8004492A6 /* StartTableViewController.xib */,
+			);
+			path = theRealProject;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -355,12 +374,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAF9FF4C1AEE9B10004492A6 /* UnreadTableViewCell.xib in Resources */,
+				AAF9FF891AF14B91004492A6 /* TheRealStoryboard.storyboard in Resources */,
 				AA5301041AE7FBEF00FD8A40 /* Main.storyboard in Resources */,
 				AAF9FF861AF14029004492A6 /* rss.db in Resources */,
 				AA5301091AE7FBEF00FD8A40 /* LaunchScreen.xib in Resources */,
 				AAF9FF471AEE9565004492A6 /* MainViewController.xib in Resources */,
 				AAF9FF421AEE94CE004492A6 /* Cas2Storyboard.storyboard in Resources */,
 				AA5301061AE7FBEF00FD8A40 /* Images.xcassets in Resources */,
+				AAF9FF8E1AF14BD8004492A6 /* StartTableViewController.xib in Resources */,
 				AAF9FF651AEEBABF004492A6 /* moni.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +404,7 @@
 			files = (
 				AA5301261AE800E400FD8A40 /* City.m in Sources */,
 				AAF9FF631AEEB63C004492A6 /* sqliteNOTES.c in Sources */,
+				AAF9FF8D1AF14BD8004492A6 /* StartTableViewController.m in Sources */,
 				AAF9FF841AF13D37004492A6 /* DAONews.m in Sources */,
 				AA5300FB1AE7FBEF00FD8A40 /* AppDelegate.m in Sources */,
 				AAF9FF4B1AEE9B10004492A6 /* UnreadTableViewCell.m in Sources */,

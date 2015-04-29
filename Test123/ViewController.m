@@ -16,6 +16,7 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *labela;
+@property (weak, nonatomic) IBOutlet UIImageView *img1;
 
 @property (assign) NSInteger i;
 @end
@@ -60,6 +61,11 @@
     
     DAONews *d = [[DAONews alloc]init];
     d.title = item.title;
+    //d.link = item.link;
+    d.link = [[[item enclosures] valueForKey:@"url"] objectAtIndex:0];
+    d.content = item.content;
+    d.descriptionn = item.description;
+    d.pubDate = item.date;
     
     [self saveDaoObj:d];
     
@@ -84,9 +90,10 @@
 - (IBAction)button1:(id)sender {
     
     //1.
-     [self parseRSS];
+    [self parseRSS];
     
-    
+    //2
+    //[self displayImageView];
     
     
     
@@ -129,7 +136,21 @@
 }
 
     
+-(void)displayImageView:(NSString*)linkot
+{
     
+dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0),^(void){
+    
+    NSData *dataImage = [NSData dataWithContentsOfURL:[NSURL URLWithString:linkot]];
+    UIImage *newsImage = [UIImage imageWithData:dataImage];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        //
+        [self.img1 setImage:newsImage];
+    });
+    
+});
+                        
+}
     
 -(void) saveDaoObj:(DAONews*)dao
 {
@@ -149,17 +170,20 @@
         
         
         [self.db open];
-        
-        [self.db executeUpdate:@"insert into New1 Values(title)",dao.title ];
+        // create table 'News1'(id number, content varchar,imageURL varchar,description varchar,pubDate date,title varchar,isRead number);
+        [self.db executeUpdate:@"insert into News1(title,content,imageURL,description,isRead) Values(?,?,?,?,?)", dao.title , dao.content , dao.link , dao.descriptionn,dao.isRead ];
 
-        NSLog(@"==================");
-//        FMResultSet *result = [self.db executeQuery:@"select * from Maja"];
-//        while ([result next]) {
-//            NSLog(@" %d",[result intForColumn:@"id"]);
-//            NSLog(@" %@",[result stringForColumn:@"username"]);
-//        }
+        NSLog(@"============READ======");
+        FMResultSet *result = [self.db executeQuery:@"select * from News1"];
+        while ([result next]) {
+            //NSLog(@" %d",[result intForColumn:@"id"]);
+            NSLog(@" %@",[result stringForColumn:@"title"]);
+            NSLog(@" %@",[result stringForColumn:@"imageURL"]);
+        }
     
         [self.db close];
+    
+    [self displayImageView:dao.link];
 }
 
 @end

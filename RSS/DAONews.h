@@ -11,7 +11,7 @@
 @interface DAONews : NSObject
 
 @property (nonatomic,strong) NSString *title;
-@property (nonatomic,strong) NSString *description;
+@property (nonatomic,strong) NSString *descriptionn;
 @property (nonatomic,strong) NSString *content;
 @property (nonatomic,strong) NSString *link;
 
