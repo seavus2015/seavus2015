@@ -1,13 +1,12 @@
 //
 //  AppDelegate.m
-//  Test123
+//  TestCas4
 //
-//  Created by Design Academy 5 on 4/22/15.
+//  Created by Design Academy 5 on 5/4/15.
 //  Copyright (c) 2015 Design Academy 5. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "MainViewController.h"
 
 @interface AppDelegate ()
 
@@ -15,28 +14,9 @@
 
 @implementation AppDelegate
 
-@synthesize mainVC;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-
-    
-    //ova
-//    mainVC = (ViewController*) [self.window rootViewController];
-//    [mainVC setManagedObjectContext:_managedObjectContext];
-//    [mainVC setManagedObjectModel:_managedObjectModel];
-//    [mainVC setPersistentStoreCoordinator:_persistentStoreCoordinator];
-//    
-    
-    //za drugoto
-//    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-//    
-//    self.main = [[MainViewController alloc] init];
-//    [self.window setRootViewController:self.main];
-//    
-//    //nezz dali treba ova
-//    [self.window makeKeyWindow];
-    
     return YES;
 }
 
@@ -71,7 +51,7 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (NSURL *)applicationDocumentsDirectory {
-    // The directory the application uses to store the Core Data store file. This code uses a directory named "com.boris.Test123" in the application's documents directory.
+    // The directory the application uses to store the Core Data store file. This code uses a directory named "com.boris.TestCas4" in the application's documents directory.
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
@@ -80,7 +60,7 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Test123" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"TestCas4" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }
@@ -94,7 +74,7 @@
     // Create the coordinator and store
     
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Test123.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"TestCas4.sqlite"];
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {

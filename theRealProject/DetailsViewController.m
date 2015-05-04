@@ -9,9 +9,9 @@
 #import "DetailsViewController.h"
 
 @interface DetailsViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *image;
-@property (weak, nonatomic) IBOutlet UILabel *descriptionn;
+//@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+//@property (weak, nonatomic) IBOutlet UIImageView *image;
+//@property (weak, nonatomic) IBOutlet UILabel *descriptionn;
 
 
 @end

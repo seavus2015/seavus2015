@@ -47,6 +47,8 @@
 		AAF9FF8E1AF14BD8004492A6 /* StartTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF9FF8C1AF14BD8004492A6 /* StartTableViewController.xib */; };
 		AAF9FF921AF15018004492A6 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF9FF901AF15018004492A6 /* DetailsViewController.m */; };
 		AAF9FF931AF15018004492A6 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAF9FF911AF15018004492A6 /* DetailsViewController.xib */; };
+		AAF9FF961AF7C976004492A6 /* Cas4Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF9FF951AF7C976004492A6 /* Cas4Storyboard.storyboard */; };
+		AAF9FF981AF7CBE8004492A6 /* cas444.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF9FF971AF7CBE8004492A6 /* cas444.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,8 @@
 		AAF9FF8F1AF15018004492A6 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		AAF9FF901AF15018004492A6 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		AAF9FF911AF15018004492A6 /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		AAF9FF951AF7C976004492A6 /* Cas4Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Cas4Storyboard.storyboard; sourceTree = "<group>"; };
+		AAF9FF971AF7CBE8004492A6 /* cas444.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = cas444.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,7 @@
 		AA5300E91AE7FBEF00FD8A40 = {
 			isa = PBXGroup;
 			children = (
+				AAF9FF941AF7C95E004492A6 /* cas4 */,
 				AAF9FF871AF14B75004492A6 /* theRealProject */,
 				AAF9FF6A1AF1347E004492A6 /* RSS */,
 				AAF9FF671AF13380004492A6 /* NOTES.c */,
@@ -301,6 +306,15 @@
 			path = theRealProject;
 			sourceTree = "<group>";
 		};
+		AAF9FF941AF7C95E004492A6 /* cas4 */ = {
+			isa = PBXGroup;
+			children = (
+				AAF9FF951AF7C976004492A6 /* Cas4Storyboard.storyboard */,
+				AAF9FF971AF7CBE8004492A6 /* cas444.storyboard */,
+			);
+			path = cas4;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -385,10 +399,12 @@
 				AAF9FF891AF14B91004492A6 /* TheRealStoryboard.storyboard in Resources */,
 				AA5301041AE7FBEF00FD8A40 /* Main.storyboard in Resources */,
 				AAF9FF861AF14029004492A6 /* rss.db in Resources */,
+				AAF9FF981AF7CBE8004492A6 /* cas444.storyboard in Resources */,
 				AA5301091AE7FBEF00FD8A40 /* LaunchScreen.xib in Resources */,
 				AAF9FF931AF15018004492A6 /* DetailsViewController.xib in Resources */,
 				AAF9FF471AEE9565004492A6 /* MainViewController.xib in Resources */,
 				AAF9FF421AEE94CE004492A6 /* Cas2Storyboard.storyboard in Resources */,
+				AAF9FF961AF7C976004492A6 /* Cas4Storyboard.storyboard in Resources */,
 				AA5301061AE7FBEF00FD8A40 /* Images.xcassets in Resources */,
 				AAF9FF8E1AF14BD8004492A6 /* StartTableViewController.xib in Resources */,
 				AAF9FF651AEEBABF004492A6 /* moni.db in Resources */,
