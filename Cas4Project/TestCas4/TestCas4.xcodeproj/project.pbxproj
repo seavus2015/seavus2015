@@ -25,6 +25,7 @@
 		AAF9FFEA1AF7D034004492A6 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF9FFDF1AF7D034004492A6 /* AFURLRequestSerialization.m */; };
 		AAF9FFEB1AF7D034004492A6 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF9FFE11AF7D034004492A6 /* AFURLResponseSerialization.m */; };
 		AAF9FFEC1AF7D034004492A6 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF9FFE31AF7D034004492A6 /* AFURLSessionManager.m */; };
+		AAF9FFEF1AF7D76A004492A6 /* Moni.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF9FFEE1AF7D76A004492A6 /* Moni.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		AAF9FFE11AF7D034004492A6 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		AAF9FFE21AF7D034004492A6 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		AAF9FFE31AF7D034004492A6 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		AAF9FFED1AF7D769004492A6 /* Moni.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Moni.h; sourceTree = "<group>"; };
+		AAF9FFEE1AF7D76A004492A6 /* Moni.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Moni.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 				AAF9FFA41AF7CE3C004492A6 /* TestCas4 */,
 				AAF9FFC11AF7CE3C004492A6 /* TestCas4Tests */,
 				AAF9FFA31AF7CE3C004492A6 /* Products */,
+				AAF9FFED1AF7D769004492A6 /* Moni.h */,
+				AAF9FFEE1AF7D76A004492A6 /* Moni.m */,
 				AAF9FFD01AF7D034004492A6 /* AFNetworking */,
 			);
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				AAF9FFE41AF7D034004492A6 /* AFHTTPRequestOperation.m in Sources */,
 				AAF9FFB11AF7CE3C004492A6 /* ViewController.m in Sources */,
 				AAF9FFEA1AF7D034004492A6 /* AFURLRequestSerialization.m in Sources */,
+				AAF9FFEF1AF7D76A004492A6 /* Moni.m in Sources */,
 				AAF9FFE61AF7D034004492A6 /* AFHTTPSessionManager.m in Sources */,
 				AAF9FFE71AF7D034004492A6 /* AFNetworkReachabilityManager.m in Sources */,
 				AAF9FFEB1AF7D034004492A6 /* AFURLResponseSerialization.m in Sources */,
